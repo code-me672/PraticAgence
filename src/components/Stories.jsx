@@ -244,17 +244,31 @@ const Stories = () => {
         {/* section testimonies */}
         <section className="bg-white">
             <div className="mx-auto max-w-screen-xl h-full px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-                <div className="-mt-44 relative gap-4 md:gap-8">
-                    <Swiper slidesPerView={3}
+                <div className="-mt-44 relative">
+                    <Swiper slidesPerView={1}
                     spaceBetween={30}
                     freeMode={true}
-                    pagination={{
-                    clickable: true,
+                    pagination={
+                    true
+                    }
+                    breakpoints={{
+                        640: {
+                          slidesPerView: 2,
+                          spaceBetween: 20,
+                        },
+                        768: {
+                          slidesPerView: 3,
+                          spaceBetween: 40,
+                        },
+                        1024: {
+                          slidesPerView: 3,
+                          spaceBetween: 50,
+                        },
                     }}
                     mousewheel={true}
                     keyboard={true}
                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                    className="mySwiper">
+                    className="mySwiper md:flex block">
                         <SwiperSlide className="rounded-lg bg-[#000B43] p-6 shadow-sm sm:p-8">
                             <p className="mt-4 text-[#878688]">
                                 "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a
