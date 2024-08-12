@@ -73,7 +73,7 @@ function App() {
   return isLoading ? (
     <Loader />
   ) : (
-      <main>
+      <main className='w-screen'>
           <RouterProvider router={router}></RouterProvider>
       </main>
   );
